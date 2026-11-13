@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonctionnalités - FeedbackHub</title>
+    <meta name="description" content="Découvrez toutes les fonctionnalités de FeedbackHub : widget personnalisable, système de votes, priorisation automatique, intégrations et plus.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+                        <path d="M16 8L22 14H18V20H14V14H10L16 8Z" fill="white"/>
+                        <path d="M10 22H22V24H10V22Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#2563EB"/>
+                                <stop offset="100%" stop-color="#7C3AED"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="logo-text">FeedbackHub</span>
+                </a>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="../index.html#features" class="nav-link">Fonctionnalités</a>
+                    <a href="pricing.html" class="nav-link">Tarifs</a>
+                    <a href="documentation.html" class="nav-link">Documentation</a>
+                    <a href="about.html" class="nav-link">À propos</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="#login" class="nav-link">Connexion</a>
+                    <a href="#signup" class="btn btn-primary">Démarrer gratuitement</a>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" style="padding: 80px 0;">
+        <div class="container">
+            <div class="center">
+                <h1 class="hero-title" style="font-size: 3rem;">Toutes les fonctionnalités pour transformer votre feedback</h1>
+                <p class="hero-subtitle" style="max-width: 700px; margin: 0 auto 32px;">
+                    Une plateforme complète pour collecter, organiser et agir sur les retours de vos utilisateurs.
+                </p>
+                <a href="#signup" class="btn btn-primary btn-large">Essayer gratuitement</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title center">Fonctionnalités principales</h2>
+            <div class="grid grid-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3>Widget personnalisable</h3>
+                    <p>Intégrez le widget en 2 minutes avec un simple snippet JavaScript. Personnalisez entièrement l'apparence (couleurs, position, textes, langue) pour matcher votre charte graphique. Compatible avec tous les frameworks modernes.</p>
+                    <ul style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; font-size: 0.875rem; color: var(--neutral-600);">
+                        <li>✓ React, Vue, Angular, Svelte</li>
+                        <li>✓ Vanilla JavaScript</li>
+                        <li>✓ TypeScript support</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3>Système de votes</h3>
+                    <p>Permettez à vos utilisateurs de voter pour les idées qu'ils préfèrent. Identifiez rapidement les fonctionnalités les plus demandées et évitez de développer des features qui n'intéressent personne.</p>
+                    <ul style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; font-size: 0.875rem; color: var(--neutral-600);">
+                        <li>✓ Votes illimités</li>
+                        <li>✓ Classement automatique</li>
+                        <li>✓ Historique des votes</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="bar-chart-3"></i>
+                    </div>
+                    <h3>Priorisation intelligente</h3>
+                    <p>Notre algorithme analyse automatiquement les votes, l'impact potentiel et l'effort estimé pour vous suggérer les meilleures priorités. Tags automatiques et tableaux de bord personnalisables.</p>
+                    <ul style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; font-size: 0.875rem; color: var(--neutral-600);">
+                        <li>✓ Scoring automatique</li>
+                        <li>✓ Tags intelligents</li>
+                        <li>✓ Vues personnalisées</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="bell"></i>
+                    </div>
+                    <h3>Notifications temps réel</h3>
+                    <p>Recevez des alertes instantanées par email ou Slack pour chaque nouveau feedback. Suivez l'évolution du statut des demandes et tenez vos utilisateurs informés avec un changelog automatique.</p>
+                    <ul style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; font-size: 0.875rem; color: var(--neutral-600);">
+                        <li>✓ Alertes Slack & Email</li>
+                        <li>✓ Suivi de statut</li>
+                        <li>✓ Changelog public</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="link"></i>
+                    </div>
+                    <h3>Intégrations natives</h3>
+                    <p>Synchronisation bidirectionnelle avec vos outils de gestion de projet préférés. API REST complète, webhooks pour automatiser vos workflows, et connexion Zapier pour 5000+ applications.</p>
+                    <ul style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; font-size: 0.875rem; color: var(--neutral-600);">
+                        <li>✓ Jira, Trello, Asana, Linear</li>
+                        <li>✓ API REST & Webhooks</li>
+                        <li>✓ Zapier & Make.com</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3>Sécurité & conformité</h3>
+                    <p>Données hébergées en Europe avec conformité RGPD complète. Authentification SSO/SAML disponible, chiffrement de bout en bout, et contrôle d'accès granulaire par équipe et projet.</p>
+                    <ul style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; font-size: 0.875rem; color: var(--neutral-600);">
+                        <li>✓ RGPD compliant</li>
+                        <li>✓ SSO & SAML</li>
+                        <li>✓ Chiffrement SSL/TLS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Features -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title center">Fonctionnalités avancées</h2>
+            <div class="grid grid-2" style="gap: 48px; align-items: start;">
+                <div>
+                    <div style="margin-bottom: 32px;">
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 12px;">
+                            <div style="width: 48px; height: 48px; background: var(--gradient-primary); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white;">
+                                <i data-lucide="filter"></i>
+                            </div>
+                            <h3 style="font-size: 1.25rem; margin: 0;">Filtres et recherche avancée</h3>
+                        </div>
+                        <p style="color: var(--neutral-600); line-height: 1.7;">Filtrez vos feedbacks par statut, type, projet, date, votes ou tags. Recherche full-text instantanée pour retrouver n'importe quel feedback en quelques secondes.</p>
+                    </div>
+
+                    <div style="margin-bottom: 32px;">
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 12px;">
+                            <div style="width: 48px; height: 48px; background: var(--gradient-primary); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white;">
+                                <i data-lucide="users-2"></i>
+                            </div>
+                            <h3 style="font-size: 1.25rem; margin: 0;">Gestion d'équipe</h3>
+                        </div>
+                        <p style="color: var(--neutral-600); line-height: 1.7;">Invitez votre équipe, assignez des rôles et permissions, créez des équipes par projet. Chaque membre voit uniquement ce qui le concerne.</p>
+                    </div>
+
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 12px;">
+                            <div style="width: 48px; height: 48px; background: var(--gradient-primary); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white;">
+                                <i data-lucide="file-text"></i>
+                            </div>
+                            <h3 style="font-size: 1.25rem; margin: 0;">Rapports et analytics</h3>
+                        </div>
+                        <p style="color: var(--neutral-600); line-height: 1.7;">Tableaux de bord avec métriques en temps réel : volume de feedbacks, tendances, satisfaction utilisateur, taux de résolution. Exportez vos données en CSV ou PDF.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div style="margin-bottom: 32px;">
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 12px;">
+                            <div style="width: 48px; height: 48px; background: var(--gradient-primary); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white;">
+                                <i data-lucide="globe"></i>
+                            </div>
+                            <h3 style="font-size: 1.25rem; margin: 0;">Multi-langue</h3>
+                        </div>
+                        <p style="color: var(--neutral-600); line-height: 1.7;">Interface disponible en 15+ langues. Le widget s'adapte automatiquement à la langue du navigateur de l'utilisateur. Traduction automatique des feedbacks disponible.</p>
+                    </div>
+
+                    <div style="margin-bottom: 32px;">
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 12px;">
+                            <div style="width: 48px; height: 48px; background: var(--gradient-primary); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white;">
+                                <i data-lucide="smartphone"></i>
+                            </div>
+                            <h3 style="font-size: 1.25rem; margin: 0;">Applications mobiles</h3>
+                        </div>
+                        <p style="color: var(--neutral-600); line-height: 1.7;">SDK natifs pour iOS et Android. Intégrez le feedback directement dans vos apps mobiles avec la même simplicité que le web.</p>
+                    </div>
+
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 12px;">
+                            <div style="width: 48px; height: 48px; background: var(--gradient-primary); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white;">
+                                <i data-lucide="image"></i>
+                            </div>
+                            <h3 style="font-size: 1.25rem; margin: 0;">Captures d'écran et pièces jointes</h3>
+                        </div>
+                        <p style="color: var(--neutral-600); line-height: 1.7;">Les utilisateurs peuvent joindre des screenshots, vidéos ou fichiers à leurs feedbacks. Annotation d'images intégrée pour pointer précisément les problèmes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrations Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title center">Intégrations avec vos outils préférés</h2>
+            <p class="section-subtitle center">Connectez FeedbackHub à votre stack technique en quelques clics</p>
+
+            <div class="grid grid-4" style="margin-top: 48px;">
+                <div style="text-align: center; padding: 24px; background: white; border: 1px solid var(--neutral-200); border-radius: 12px;">
+                    <div style="width: 64px; height: 64px; margin: 0 auto 16px; background: #0052CC; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.5rem;">J</div>
+                    <h4 style="margin-bottom: 8px;">Jira</h4>
+                    <p style="font-size: 0.875rem; color: var(--neutral-600);">Sync bidirectionnel</p>
+                </div>
+
+                <div style="text-align: center; padding: 24px; background: white; border: 1px solid var(--neutral-200); border-radius: 12px;">
+                    <div style="width: 64px; height: 64px; margin: 0 auto 16px; background: #0079BF; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.5rem;">T</div>
+                    <h4 style="margin-bottom: 8px;">Trello</h4>
+                    <p style="font-size: 0.875rem; color: var(--neutral-600);">Création automatique de cartes</p>
+                </div>
+
+                <div style="text-align: center; padding: 24px; background: white; border: 1px solid var(--neutral-200); border-radius: 12px;">
+                    <div style="width: 64px; height: 64px; margin: 0 auto 16px; background: #5E60CE; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.5rem;">L</div>
+                    <h4 style="margin-bottom: 8px;">Linear</h4>
+                    <p style="font-size: 0.875rem; color: var(--neutral-600);">Sync temps réel</p>
+                </div>
+
+                <div style="text-align: center; padding: 24px; background: white; border: 1px solid var(--neutral-200); border-radius: 12px;">
+                    <div style="width: 64px; height: 64px; margin: 0 auto 16px; background: #611f69; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.5rem;">S</div>
+                    <h4 style="margin-bottom: 8px;">Slack</h4>
+                    <p style="font-size: 0.875rem; color: var(--neutral-600);">Notifications instantanées</p>
+                </div>
+
+                <div style="text-align: center; padding: 24px; background: white; border: 1px solid var(--neutral-200); border-radius: 12px;">
+                    <div style="width: 64px; height: 64px; margin: 0 auto 16px; background: #F76300; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.5rem;">A</div>
+                    <h4 style="margin-bottom: 8px;">Asana</h4>
+                    <p style="font-size: 0.875rem; color: var(--neutral-600);">Création de tâches</p>
+                </div>
+
+                <div style="text-align: center; padding: 24px; background: white; border: 1px solid var(--neutral-200); border-radius: 12px;">
+                    <div style="width: 64px; height: 64px; margin: 0 auto 16px; background: #FF4F00; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.5rem;">Z</div>
+                    <h4 style="margin-bottom: 8px;">Zapier</h4>
+                    <p style="font-size: 0.875rem; color: var(--neutral-600);">5000+ apps</p>
+                </div>
+
+                <div style="text-align: center; padding: 24px; background: white; border: 1px solid var(--neutral-200); border-radius: 12px;">
+                    <div style="width: 64px; height: 64px; margin: 0 auto 16px; background: #00A4EF; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.5rem;">D</div>
+                    <h4 style="margin-bottom: 8px;">Discord</h4>
+                    <p style="font-size: 0.875rem; color: var(--neutral-600);">Webhooks</p>
+                </div>
+
+                <div style="text-align: center; padding: 24px; background: white; border: 1px solid var(--neutral-200); border-radius: 12px;">
+                    <div style="width: 64px; height: 64px; margin: 0 auto 16px; background: var(--neutral-800); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.5rem;">+</div>
+                    <h4 style="margin-bottom: 8px;">API REST</h4>
+                    <p style="font-size: 0.875rem; color: var(--neutral-600);">Documentation complète</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Découvrez toutes ces fonctionnalités gratuitement</h2>
+                <p>Essayez FeedbackHub pendant 14 jours sans engagement. Aucune carte bancaire requise.</p>
+                <div class="cta-buttons">
+                    <a href="#signup" class="btn btn-primary btn-large">Démarrer l'essai gratuit</a>
+                    <a href="documentation.html" class="btn btn-secondary btn-large">Voir la documentation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="url(#footer-logo-gradient)"/>
+                            <path d="M16 8L22 14H18V20H14V14H10L16 8Z" fill="white"/>
+                            <path d="M10 22H22V24H10V22Z" fill="white"/>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#2563EB"/>
+                                    <stop offset="100%" stop-color="#7C3AED"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>FeedbackHub</span>
+                    </div>
+                    <p class="footer-description">La plateforme de feedback qui transforme vos utilisateurs en co-créateurs de votre produit</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Produit</h4>
+                    <ul>
+                        <li><a href="features.html">Fonctionnalités</a></li>
+                        <li><a href="pricing.html">Tarifs</a></li>
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Changelog</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">Études de cas</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="#">Communauté</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="#">Carrières</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">CGU & CGV</a></li>
+                        <li><a href="#">Confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 FeedbackHub. Tous droits réservés. • Fait avec ❤️ pour les product builders</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

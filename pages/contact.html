@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - FeedbackHub</title>
+    <meta name="description" content="Contactez l'équipe FeedbackHub. Nous sommes là pour répondre à toutes vos questions.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+                        <path d="M16 8L22 14H18V20H14V14H10L16 8Z" fill="white"/>
+                        <path d="M10 22H22V24H10V22Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#2563EB"/>
+                                <stop offset="100%" stop-color="#7C3AED"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="logo-text">FeedbackHub</span>
+                </a>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="../index.html#features" class="nav-link">Fonctionnalités</a>
+                    <a href="pricing.html" class="nav-link">Tarifs</a>
+                    <a href="documentation.html" class="nav-link">Documentation</a>
+                    <a href="about.html" class="nav-link">À propos</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="#login" class="nav-link">Connexion</a>
+                    <a href="#signup" class="btn btn-primary">Démarrer gratuitement</a>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" style="padding: 80px 0;">
+        <div class="container">
+            <div class="center">
+                <h1 class="hero-title" style="font-size: 3rem;">Contactez-nous</h1>
+                <p class="hero-subtitle" style="max-width: 600px; margin: 0 auto;">
+                    Une question ? Besoin d'aide ? Notre équipe est là pour vous répondre.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;">
+                <!-- Contact Form -->
+                <div>
+                    <h2 style="font-size: 1.75rem; margin-bottom: 16px;">Envoyez-nous un message</h2>
+                    <p style="color: var(--neutral-600); margin-bottom: 32px;">Remplissez le formulaire ci-dessous et nous vous répondrons sous 24h.</p>
+
+                    <form id="contactForm" style="display: flex; flex-direction: column; gap: 20px;">
+                        <div>
+                            <label style="display: block; font-weight: 500; margin-bottom: 8px; color: var(--neutral-900);">Nom complet *</label>
+                            <input type="text" name="name" required style="width: 100%; padding: 12px; border: 1px solid var(--neutral-200); border-radius: 8px; font-family: inherit; font-size: 0.9375rem; transition: var(--transition);">
+                        </div>
+
+                        <div>
+                            <label style="display: block; font-weight: 500; margin-bottom: 8px; color: var(--neutral-900);">Email *</label>
+                            <input type="email" name="email" required style="width: 100%; padding: 12px; border: 1px solid var(--neutral-200); border-radius: 8px; font-family: inherit; font-size: 0.9375rem; transition: var(--transition);">
+                        </div>
+
+                        <div>
+                            <label style="display: block; font-weight: 500; margin-bottom: 8px; color: var(--neutral-900);">Entreprise</label>
+                            <input type="text" name="company" style="width: 100%; padding: 12px; border: 1px solid var(--neutral-200); border-radius: 8px; font-family: inherit; font-size: 0.9375rem; transition: var(--transition);">
+                        </div>
+
+                        <div>
+                            <label style="display: block; font-weight: 500; margin-bottom: 8px; color: var(--neutral-900);">Sujet *</label>
+                            <select name="subject" required style="width: 100%; padding: 12px; border: 1px solid var(--neutral-200); border-radius: 8px; font-family: inherit; font-size: 0.9375rem; transition: var(--transition); background: white;">
+                                <option value="">Choisissez un sujet</option>
+                                <option value="sales">Question commerciale</option>
+                                <option value="support">Support technique</option>
+                                <option value="demo">Demande de démo</option>
+                                <option value="partnership">Partenariat</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label style="display: block; font-weight: 500; margin-bottom: 8px; color: var(--neutral-900);">Message *</label>
+                            <textarea name="message" required rows="6" style="width: 100%; padding: 12px; border: 1px solid var(--neutral-200); border-radius: 8px; font-family: inherit; font-size: 0.9375rem; resize: vertical; transition: var(--transition);"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Envoyer le message
+                        </button>
+
+                        <p style="font-size: 0.875rem; color: var(--neutral-600); text-align: center;">
+                            En envoyant ce formulaire, vous acceptez notre politique de confidentialité.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h2 style="font-size: 1.75rem; margin-bottom: 32px;">Autres moyens de nous contacter</h2>
+
+                    <div style="display: flex; flex-direction: column; gap: 32px;">
+                        <div style="display: flex; gap: 16px;">
+                            <div style="width: 48px; height: 48px; background: rgba(37, 99, 235, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 1.125rem; margin-bottom: 4px;">Email</h3>
+                                <p style="color: var(--neutral-600); margin-bottom: 4px;">Pour toute question générale</p>
+                                <a href="mailto:contact@feedbackhub.com" style="color: var(--primary); font-weight: 500;">contact@feedbackhub.com</a>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 16px;">
+                            <div style="width: 48px; height: 48px; background: rgba(37, 99, 235, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
+                                <i data-lucide="headphones"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 1.125rem; margin-bottom: 4px;">Support technique</h3>
+                                <p style="color: var(--neutral-600); margin-bottom: 4px;">Assistance disponible 24/7</p>
+                                <a href="mailto:support@feedbackhub.com" style="color: var(--primary); font-weight: 500;">support@feedbackhub.com</a>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 16px;">
+                            <div style="width: 48px; height: 48px; background: rgba(37, 99, 235, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
+                                <i data-lucide="briefcase"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 1.125rem; margin-bottom: 4px;">Ventes & Entreprise</h3>
+                                <p style="color: var(--neutral-600); margin-bottom: 4px;">Pour les plans Enterprise</p>
+                                <a href="mailto:sales@feedbackhub.com" style="color: var(--primary); font-weight: 500;">sales@feedbackhub.com</a>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 16px;">
+                            <div style="width: 48px; height: 48px; background: rgba(37, 99, 235, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
+                                <i data-lucide="message-circle"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 1.125rem; margin-bottom: 4px;">Chat en direct</h3>
+                                <p style="color: var(--neutral-600); margin-bottom: 8px;">Discutez avec notre équipe</p>
+                                <button onclick="alert('Chat en construction')" style="color: var(--primary); font-weight: 500; background: none; border: none; padding: 0; cursor: pointer; font-family: inherit; font-size: 1rem;">Démarrer une conversation →</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 48px; padding: 24px; background: var(--neutral-50); border-radius: 12px;">
+                        <h3 style="font-size: 1.125rem; margin-bottom: 12px;">Temps de réponse</h3>
+                        <ul style="display: flex; flex-direction: column; gap: 8px; font-size: 0.9375rem; color: var(--neutral-700);">
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <i data-lucide="check-circle" style="color: var(--accent); width: 20px; height: 20px;"></i>
+                                Support : &lt; 2h en moyenne
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <i data-lucide="check-circle" style="color: var(--accent); width: 20px; height: 20px;"></i>
+                                Ventes : &lt; 24h
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <i data-lucide="check-circle" style="color: var(--accent); width: 20px; height: 20px;"></i>
+                                Général : &lt; 48h
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title center">Questions fréquentes</h2>
+            <p class="section-subtitle center">Vous trouverez peut-être votre réponse ci-dessous</p>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Comment puis-je réserver une démo ?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Utilisez le formulaire ci-dessus en sélectionnant "Demande de démo" ou envoyez un email à sales@feedbackhub.com. Nous vous recontacterons sous 24h pour planifier une session.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Proposez-vous un support en français ?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui ! Notre équipe support parle français et est disponible par email et chat pour vous assister.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Où sont hébergées mes données ?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Toutes les données sont hébergées en Europe (serveurs en France et Allemagne) avec conformité RGPD complète.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Puis-je migrer depuis un autre outil de feedback ?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolument ! Nous proposons des outils de migration gratuits pour Canny, UserVoice, et d'autres plateformes. Notre équipe vous accompagne dans le processus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="url(#footer-logo-gradient)"/>
+                            <path d="M16 8L22 14H18V20H14V14H10L16 8Z" fill="white"/>
+                            <path d="M10 22H22V24H10V22Z" fill="white"/>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#2563EB"/>
+                                    <stop offset="100%" stop-color="#7C3AED"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>FeedbackHub</span>
+                    </div>
+                    <p class="footer-description">La plateforme de feedback qui transforme vos utilisateurs en co-créateurs de votre produit</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Produit</h4>
+                    <ul>
+                        <li><a href="features.html">Fonctionnalités</a></li>
+                        <li><a href="pricing.html">Tarifs</a></li>
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Changelog</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">Études de cas</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="#">Communauté</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="#">Carrières</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">CGU & CGV</a></li>
+                        <li><a href="#">Confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 FeedbackHub. Tous droits réservés. • Fait avec ❤️ pour les product builders</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+
+            // Simulate form submission
+            showNotification('Message envoyé avec succès ! Nous vous répondrons sous 24h.', 'success');
+            e.target.reset();
+        });
+
+        // Add focus styles to form inputs
+        const inputs = document.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', (e) => {
+                e.target.style.outline = 'none';
+                e.target.style.borderColor = 'var(--primary)';
+                e.target.style.boxShadow = '0 0 0 3px rgba(37, 99, 235, 0.1)';
+            });
+            input.addEventListener('blur', (e) => {
+                e.target.style.borderColor = 'var(--neutral-200)';
+                e.target.style.boxShadow = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

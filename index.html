@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedbackHub - Plateforme de Feedback Client pour Produits Numériques</title>
+    <meta name="description" content="Collectez et priorisez le feedback utilisateur avec un widget intégré. Votes, roadmap automatique, intégrations Jira/Trello. Essai gratuit 14 jours.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="FeedbackHub - Transformez le feedback en roadmap produit">
+    <meta property="og:description" content="Un widget élégant qui s'intègre en 2 minutes à votre app. Collectez, priorisez et agissez sur les retours utilisateurs.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+                        <path d="M16 8L22 14H18V20H14V14H10L16 8Z" fill="white"/>
+                        <path d="M10 22H22V24H10V22Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#2563EB"/>
+                                <stop offset="100%" stop-color="#7C3AED"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="logo-text">FeedbackHub</span>
+                </a>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="#features" class="nav-link">Fonctionnalités</a>
+                    <a href="pages/pricing.html" class="nav-link">Tarifs</a>
+                    <a href="pages/documentation.html" class="nav-link">Documentation</a>
+                    <a href="pages/about.html" class="nav-link">À propos</a>
+                    <a href="pages/contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="#login" class="nav-link">Connexion</a>
+                    <a href="#signup" class="btn btn-primary">Démarrer gratuitement</a>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title fade-in-up">
+                        Transformez le feedback de vos utilisateurs en roadmap produit
+                    </h1>
+                    <p class="hero-subtitle fade-in-up delay-1">
+                        Un widget élégant qui s'intègre en 2 minutes à votre app. Collectez, priorisez et agissez sur les retours de vos utilisateurs sans quitter votre workflow.
+                    </p>
+                    <div class="hero-cta fade-in-up delay-2">
+                        <a href="#signup" class="btn btn-primary btn-large">
+                            Démarrer gratuitement
+                        </a>
+                        <a href="#demo" class="btn btn-secondary btn-large" id="demoBtn">
+                            <i data-lucide="play-circle"></i>
+                            Voir la démo interactive
+                        </a>
+                    </div>
+                    <p class="hero-note fade-in-up delay-3">
+                        Pas de carte bancaire requise • 14 jours d'essai
+                    </p>
+                </div>
+                <div class="hero-visual fade-in-up delay-2">
+                    <div class="dashboard-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="mockup-title">FeedbackHub Dashboard</div>
+                        </div>
+                        <div class="mockup-content">
+                            <div class="feedback-card">
+                                <div class="feedback-header">
+                                    <span class="feedback-tag tag-feature">Fonctionnalité</span>
+                                    <span class="feedback-votes">
+                                        <i data-lucide="arrow-up"></i> 47
+                                    </span>
+                                </div>
+                                <h4>Mode sombre pour le dashboard</h4>
+                                <p>Il serait génial d'avoir une option dark mode...</p>
+                                <div class="feedback-meta">
+                                    <span>👤 Marie D.</span>
+                                    <span>🕐 Il y a 2h</span>
+                                </div>
+                            </div>
+                            <div class="feedback-card">
+                                <div class="feedback-header">
+                                    <span class="feedback-tag tag-bug">Bug</span>
+                                    <span class="feedback-votes">
+                                        <i data-lucide="arrow-up"></i> 23
+                                    </span>
+                                </div>
+                                <h4>Erreur lors de l'export CSV</h4>
+                                <p>Le bouton d'export ne fonctionne pas sur Safari...</p>
+                                <div class="feedback-meta">
+                                    <span>👤 Thomas L.</span>
+                                    <span>🕐 Il y a 5h</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title center">Votre feedback est éparpillé partout</h2>
+            <div class="grid grid-3">
+                <div class="problem-card">
+                    <div class="problem-icon">📧</div>
+                    <h3>Emails perdus</h3>
+                    <p>Les retours arrivent par email et se noient dans votre boîte</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">💬</div>
+                    <h3>Support surchargé</h3>
+                    <p>Votre équipe support croule sous les demandes non structurées</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🤷</div>
+                    <h3>Priorités floues</h3>
+                    <p>Impossible de savoir quelles fonctionnalités développer en priorité</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="section">
+        <div class="container">
+            <div class="solution-content">
+                <div class="solution-text">
+                    <h2 class="section-title">Une solution, un seul endroit</h2>
+                    <p class="section-description">
+                        Intégrez FeedbackHub en quelques lignes de code et offrez à vos utilisateurs un moyen simple et rapide de partager leurs retours directement depuis votre application.
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <i data-lucide="check-circle"></i>
+                            <span>Intégration en moins de 3 minutes</span>
+                        </li>
+                        <li>
+                            <i data-lucide="check-circle"></i>
+                            <span>Widget personnalisable à 100%</span>
+                        </li>
+                        <li>
+                            <i data-lucide="check-circle"></i>
+                            <span>Synchronisation automatique avec vos outils</span>
+                        </li>
+                        <li>
+                            <i data-lucide="check-circle"></i>
+                            <span>Priorisation intelligente des demandes</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="solution-visual">
+                    <div class="widget-demo">
+                        <div class="app-mockup">
+                            <div class="app-header">
+                                <span>Votre Application</span>
+                            </div>
+                            <div class="app-content">
+                                <p>Contenu de votre application...</p>
+                            </div>
+                            <button class="feedback-trigger" id="widgetTrigger">
+                                <i data-lucide="message-circle"></i>
+                                Feedback
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section section-light" id="features">
+        <div class="container">
+            <h2 class="section-title center">Tout ce dont vous avez besoin pour écouter vos utilisateurs</h2>
+            <div class="grid grid-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3>Widget personnalisable</h3>
+                    <p>Intégration en 2 minutes avec un snippet de code. Personnalisation complète (couleurs, position, langue). Compatible tous frameworks (React, Vue, Angular, vanilla JS).</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3>Système de votes</h3>
+                    <p>Vos utilisateurs votent pour leurs fonctionnalités préférées. Identifiez rapidement les demandes populaires. Évitez de développer des features inutiles.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="bar-chart-3"></i>
+                    </div>
+                    <h3>Priorisation automatique</h3>
+                    <p>Algorithme intelligent de scoring (votes + impact + effort). Tags automatiques (bug, feature, amélioration). Tableaux de bord personnalisables.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="bell"></i>
+                    </div>
+                    <h3>Notifications temps réel</h3>
+                    <p>Alertes par email ou Slack pour les nouveaux feedbacks. Suivi du statut des demandes (nouveau, en cours, résolu). Changelog automatique pour vos utilisateurs.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="link"></i>
+                    </div>
+                    <h3>Intégrations natives</h3>
+                    <p>Synchronisation bidirectionnelle avec Jira, Trello, Asana, Linear. API REST complète et webhooks. Zapier pour connecter 5000+ outils.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3>Sécurité & confidentialité</h3>
+                    <p>Données hébergées en Europe (RGPD compliant). Authentification SSO disponible. Contrôle d'accès granulaire par équipe.</p>
+                </div>
+            </div>
+            <div class="center" style="margin-top: 48px;">
+                <a href="pages/features.html" class="btn btn-primary">Explorer toutes les fonctionnalités</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title center">Prêt en 3 étapes simples</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3>Intégration</h3>
+                        <p>Ajoutez 2 lignes de code à votre application</p>
+                        <div class="code-block">
+                            <pre><code>&lt;!-- Copiez ce code dans votre app --&gt;
+&lt;script src="feedbackhub.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  FeedbackHub.init('VOTRE_CLE_API');
+&lt;/script&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3>Personnalisation</h3>
+                        <p>Personnalisez le widget selon votre charte graphique</p>
+                        <div class="config-preview">
+                            <div class="config-options">
+                                <span class="config-option" style="background: #2563EB;"></span>
+                                <span class="config-option" style="background: #7C3AED;"></span>
+                                <span class="config-option" style="background: #10B981;"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3>Collecte</h3>
+                        <p>Recevez, priorisez et agissez sur les retours en temps réel</p>
+                        <div class="collection-preview">
+                            <div class="mini-feedback">
+                                <span class="mini-tag">Feature</span>
+                                <span class="mini-votes">↑ 23</span>
+                            </div>
+                            <div class="mini-feedback">
+                                <span class="mini-tag">Bug</span>
+                                <span class="mini-votes">↑ 15</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title center">Ils nous font confiance</h2>
+            <p class="section-subtitle center">Trusted by 500+ product teams</p>
+
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"FeedbackHub nous a permis de réduire de 60% le temps passé à trier les retours utilisateurs. Notre roadmap est maintenant pilotée par les vraies priorités."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MD</div>
+                        <div class="author-info">
+                            <div class="author-name">Marie Dubois</div>
+                            <div class="author-role">Product Manager @ TechStartup</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"L'intégration a pris 5 minutes. Le système de votes nous a aidé à identifier les vrais besoins de nos utilisateurs. Indispensable pour toute équipe produit."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JM</div>
+                        <div class="author-info">
+                            <div class="author-name">Jean Martin</div>
+                            <div class="author-role">CTO @ InnovApp</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"La synchronisation avec Jira est parfaite. Plus besoin de copier-coller manuellement les feedbacks. Tout est automatisé et notre équipe dev gagne un temps fou."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SC</div>
+                        <div class="author-info">
+                            <div class="author-name">Sophie Chen</div>
+                            <div class="author-role">Engineering Lead @ DataFlow</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section stats-section">
+        <div class="container">
+            <div class="grid grid-4">
+                <div class="stat-card">
+                    <div class="stat-number">92%</div>
+                    <div class="stat-label">Taux de satisfaction utilisateur</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3 min</div>
+                    <div class="stat-label">Temps moyen d'intégration</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10 000+</div>
+                    <div class="stat-label">Feedbacks collectés chaque mois</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">45%</div>
+                    <div class="stat-label">Augmentation de l'engagement</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Preview Section -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title center">Des prix simples et transparents</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">
+                        <span class="price-amount">29€</span>
+                        <span class="price-period">/mois</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i> Jusqu'à 1 000 feedbacks/mois</li>
+                        <li><i data-lucide="check"></i> 1 projet</li>
+                        <li><i data-lucide="check"></i> Widget personnalisable</li>
+                        <li><i data-lucide="check"></i> Support email</li>
+                    </ul>
+                    <a href="pages/pricing.html" class="btn btn-secondary btn-block">Commencer</a>
+                </div>
+
+                <div class="pricing-card pricing-card-featured">
+                    <div class="pricing-badge">Populaire</div>
+                    <h3>Pro</h3>
+                    <div class="price">
+                        <span class="price-amount">79€</span>
+                        <span class="price-period">/mois</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i> Jusqu'à 10 000 feedbacks/mois</li>
+                        <li><i data-lucide="check"></i> 5 projets</li>
+                        <li><i data-lucide="check"></i> Toutes les intégrations</li>
+                        <li><i data-lucide="check"></i> Support prioritaire</li>
+                        <li><i data-lucide="check"></i> API complète</li>
+                    </ul>
+                    <a href="pages/pricing.html" class="btn btn-primary btn-block">Commencer</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">
+                        <span class="price-amount">Sur devis</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i> Feedbacks illimités</li>
+                        <li><i data-lucide="check"></i> Projets illimités</li>
+                        <li><i data-lucide="check"></i> SSO & SAML</li>
+                        <li><i data-lucide="check"></i> Support dédié</li>
+                        <li><i data-lucide="check"></i> On-premise possible</li>
+                    </ul>
+                    <a href="pages/contact.html" class="btn btn-secondary btn-block">Nous contacter</a>
+                </div>
+            </div>
+            <div class="center" style="margin-top: 48px;">
+                <a href="pages/pricing.html" class="btn btn-primary">Voir tous les détails tarifaires</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title center">Questions fréquentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Combien de temps prend l'intégration ?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>En moyenne 3 minutes. Vous ajoutez un snippet JavaScript et le widget est opérationnel.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Puis-je personnaliser l'apparence du widget ?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, totalement. Couleurs, position, textes, langue, tout est personnalisable via le dashboard.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Comment fonctionne la synchronisation avec Jira/Trello ?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Connectez votre compte en quelques clics. Les feedbacks deviennent automatiquement des tickets synchronisés bidirectionnellement.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Les données sont-elles sécurisées ?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, hébergement en Europe, chiffrement SSL, conformité RGPD. Nous ne vendons jamais vos données.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Puis-je essayer avant de payer ?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolument. 14 jours d'essai gratuit, sans carte bancaire.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Que se passe-t-il si je dépasse mon quota ?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Vous recevez une alerte. Vous pouvez upgrader à tout moment ou les nouveaux feedbacks sont mis en attente.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Le widget ralentit-il mon application ?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Non, chargement asynchrone de 12 Ko seulement, aucun impact sur les performances.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Puis-je annuler à tout moment ?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, sans frais ni engagement. Vos données restent accessibles 30 jours après annulation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à transformer votre feedback en actions ?</h2>
+                <p>Rejoignez 500+ product teams qui utilisent FeedbackHub pour créer de meilleurs produits.</p>
+                <div class="cta-buttons">
+                    <a href="#signup" class="btn btn-primary btn-large">Démarrer gratuitement</a>
+                    <a href="pages/contact.html" class="btn btn-secondary btn-large">Parler à un expert</a>
+                </div>
+                <p class="cta-note">14 jours d'essai gratuit • Sans carte bancaire • Support en français</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="url(#footer-logo-gradient)"/>
+                            <path d="M16 8L22 14H18V20H14V14H10L16 8Z" fill="white"/>
+                            <path d="M10 22H22V24H10V22Z" fill="white"/>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#2563EB"/>
+                                    <stop offset="100%" stop-color="#7C3AED"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>FeedbackHub</span>
+                    </div>
+                    <p class="footer-description">La plateforme de feedback qui transforme vos utilisateurs en co-créateurs de votre produit</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Produit</h4>
+                    <ul>
+                        <li><a href="pages/features.html">Fonctionnalités</a></li>
+                        <li><a href="pages/pricing.html">Tarifs</a></li>
+                        <li><a href="pages/documentation.html">Documentation</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Changelog</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">Études de cas</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="#">Communauté</a></li>
+                        <li><a href="pages/contact.html">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="pages/about.html">À propos</a></li>
+                        <li><a href="#">Carrières</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">CGU & CGV</a></li>
+                        <li><a href="#">Confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 FeedbackHub. Tous droits réservés. • Fait avec ❤️ pour les product builders</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Feedback Widget Modal -->
+    <div class="widget-modal" id="widgetModal">
+        <div class="widget-modal-content">
+            <div class="widget-modal-header">
+                <h3>Envoyer un feedback</h3>
+                <button class="widget-modal-close" id="closeWidget">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="widget-modal-body">
+                <div class="widget-type-selector">
+                    <button class="widget-type-btn active" data-type="feature">
+                        <i data-lucide="lightbulb"></i>
+                        Idée
+                    </button>
+                    <button class="widget-type-btn" data-type="bug">
+                        <i data-lucide="bug"></i>
+                        Bug
+                    </button>
+                    <button class="widget-type-btn" data-type="other">
+                        <i data-lucide="message-circle"></i>
+                        Autre
+                    </button>
+                </div>
+                <form class="widget-form">
+                    <input type="text" placeholder="Titre de votre feedback" required>
+                    <textarea placeholder="Décrivez votre idée ou problème..." rows="4" required></textarea>
+                    <button type="submit" class="btn btn-primary btn-block">Envoyer le feedback</button>
+                </form>
+                <p class="widget-note">Ceci est une démo du widget FeedbackHub</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-content">
+            <button class="video-modal-close" id="closeVideo">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="video-wrapper">
+                <div class="demo-placeholder">
+                    <i data-lucide="play-circle" style="width: 80px; height: 80px;"></i>
+                    <h3>Démo interactive FeedbackHub</h3>
+                    <p>Découvrez comment FeedbackHub transforme votre collecte de feedback en 2 minutes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

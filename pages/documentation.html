@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - FeedbackHub</title>
+    <meta name="description" content="Documentation complète de FeedbackHub : guide de démarrage rapide, intégration, API et exemples de code.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+                        <path d="M16 8L22 14H18V20H14V14H10L16 8Z" fill="white"/>
+                        <path d="M10 22H22V24H10V22Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#2563EB"/>
+                                <stop offset="100%" stop-color="#7C3AED"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="logo-text">FeedbackHub</span>
+                </a>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="../index.html#features" class="nav-link">Fonctionnalités</a>
+                    <a href="pricing.html" class="nav-link">Tarifs</a>
+                    <a href="documentation.html" class="nav-link">Documentation</a>
+                    <a href="about.html" class="nav-link">À propos</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="#login" class="nav-link">Connexion</a>
+                    <a href="#signup" class="btn btn-primary">Démarrer gratuitement</a>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" style="padding: 80px 0;">
+        <div class="container">
+            <div class="center">
+                <h1 class="hero-title" style="font-size: 3rem;">Documentation FeedbackHub</h1>
+                <p class="hero-subtitle" style="max-width: 700px; margin: 0 auto;">
+                    Tout ce dont vous avez besoin pour intégrer et utiliser FeedbackHub
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2 style="font-size: 2rem; margin-bottom: 16px;">Démarrage rapide</h2>
+                <p style="color: var(--neutral-600); margin-bottom: 32px; font-size: 1.0625rem;">Intégrez le widget FeedbackHub à votre application en moins de 3 minutes.</p>
+
+                <div style="background: var(--neutral-50); border: 1px solid var(--neutral-200); border-radius: 12px; padding: 32px; margin-bottom: 32px;">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                        <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.875rem; font-weight: 700;">1</span>
+                        Obtenez votre clé API
+                    </h3>
+                    <p style="color: var(--neutral-600); margin-bottom: 16px;">Connectez-vous à votre dashboard FeedbackHub et copiez votre clé API depuis les paramètres du projet.</p>
+                    <div class="code-block">
+                        <pre><code>// Votre clé API ressemble à ceci
+const API_KEY = 'fbh_live_1234567890abcdef';</code></pre>
+                    </div>
+                </div>
+
+                <div style="background: var(--neutral-50); border: 1px solid var(--neutral-200); border-radius: 12px; padding: 32px; margin-bottom: 32px;">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                        <span style="background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.875rem; font-weight: 700;">2</span>
+                        Ajoutez le script à votre page
+                    </h3>
+                    <p style="color: var(--neutral-600); margin-bottom: 16px;">Copiez ce code juste avant la balise <code style="background: var(--neutral-200); padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 0.875rem;">&lt;/body&gt;</code> de votre HTML.</p>
+                    <div class="code-block">
+                        <pre><code>&lt;!-- FeedbackHub Widget --&gt;
+&lt;script src="https://cdn.feedbackhub.com/widget.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  FeedbackHub.init({
+    apiKey: 'VOTRE_CLE_API',
+    position: 'bottom-right', // 'bottom-right', 'bottom-left', 'top-right', 'top-left'
+    primaryColor: '#2563EB',
+    language: 'fr' // 'en', 'fr', 'es', 'de'...
+  });
+&lt;/script&gt;</code></pre>
+                    </div>
+                </div>
+
+                <div style="background: var(--neutral-50); border: 1px solid var(--neutral-200); border-radius: 12px; padding: 32px;">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                        <span style="background: var(--accent); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.875rem; font-weight: 700;">✓</span>
+                        C'est tout !
+                    </h3>
+                    <p style="color: var(--neutral-600);">Le widget est maintenant actif sur votre site. Vos utilisateurs peuvent cliquer dessus pour envoyer leurs feedbacks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Framework Guides -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title center">Intégration par framework</h2>
+            <p class="section-subtitle center">Exemples spécifiques pour votre stack technique</p>
+
+            <div class="grid grid-3" style="margin-top: 48px;">
+                <div style="background: white; border: 1px solid var(--neutral-200); border-radius: 12px; padding: 24px;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                        <div style="width: 48px; height: 48px; background: #61DAFB; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem;">R</div>
+                        <h3 style="font-size: 1.125rem; margin: 0;">React</h3>
+                    </div>
+                    <div class="code-block" style="margin-bottom: 16px;">
+                        <pre><code style="font-size: 0.8125rem;">import { useEffect } from 'react';
+
+function App() {
+  useEffect(() => {
+    FeedbackHub.init({
+      apiKey: 'VOTRE_CLE'
+    });
+  }, []);
+
+  return &lt;div&gt;...&lt;/div&gt;;
+}</code></pre>
+                    </div>
+                    <a href="#" style="color: var(--primary); font-weight: 500; font-size: 0.875rem;">Voir le guide complet →</a>
+                </div>
+
+                <div style="background: white; border: 1px solid var(--neutral-200); border-radius: 12px; padding: 24px;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                        <div style="width: 48px; height: 48px; background: #42B883; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem;">V</div>
+                        <h3 style="font-size: 1.125rem; margin: 0;">Vue.js</h3>
+                    </div>
+                    <div class="code-block" style="margin-bottom: 16px;">
+                        <pre><code style="font-size: 0.8125rem;">// main.js
+import { createApp } from 'vue';
+
+createApp(App)
+  .mount('#app');
+
+FeedbackHub.init({
+  apiKey: 'VOTRE_CLE'
+});</code></pre>
+                    </div>
+                    <a href="#" style="color: var(--primary); font-weight: 500; font-size: 0.875rem;">Voir le guide complet →</a>
+                </div>
+
+                <div style="background: white; border: 1px solid var(--neutral-200); border-radius: 12px; padding: 24px;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                        <div style="width: 48px; height: 48px; background: #DD0031; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem;">A</div>
+                        <h3 style="font-size: 1.125rem; margin: 0;">Angular</h3>
+                    </div>
+                    <div class="code-block" style="margin-bottom: 16px;">
+                        <pre><code style="font-size: 0.8125rem;">// app.component.ts
+ngOnInit() {
+  FeedbackHub.init({
+    apiKey: 'VOTRE_CLE',
+    position: 'bottom-right'
+  });
+}</code></pre>
+                    </div>
+                    <a href="#" style="color: var(--primary); font-weight: 500; font-size: 0.875rem;">Voir le guide complet →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Reference -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2 style="font-size: 2rem; margin-bottom: 32px;">API REST</h2>
+
+                <div style="margin-bottom: 48px;">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 16px; color: var(--neutral-900);">Authentification</h3>
+                    <p style="color: var(--neutral-600); margin-bottom: 16px;">Toutes les requêtes API nécessitent votre clé API dans le header <code style="background: var(--neutral-100); padding: 2px 6px; border-radius: 4px; font-family: monospace;">Authorization</code>.</p>
+                    <div class="code-block">
+                        <pre><code>curl https://api.feedbackhub.com/v1/feedbacks \
+  -H "Authorization: Bearer VOTRE_CLE_API"</code></pre>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 48px;">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 16px; color: var(--neutral-900);">Récupérer les feedbacks</h3>
+                    <div style="background: var(--neutral-50); border-left: 4px solid var(--accent); padding: 16px; margin-bottom: 16px; border-radius: 4px;">
+                        <code style="font-family: monospace; font-weight: 600;">GET /v1/feedbacks</code>
+                    </div>
+                    <div class="code-block">
+                        <pre><code>// Requête
+fetch('https://api.feedbackhub.com/v1/feedbacks', {
+  headers: {
+    'Authorization': 'Bearer VOTRE_CLE_API'
+  }
+})
+
+// Réponse
+{
+  "feedbacks": [
+    {
+      "id": "fb_123abc",
+      "type": "feature",
+      "title": "Mode sombre",
+      "description": "Il serait génial d'avoir un dark mode",
+      "votes": 47,
+      "status": "planned",
+      "created_at": "2025-01-15T10:30:00Z"
+    }
+  ],
+  "total": 156,
+  "page": 1
+}</code></pre>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 48px;">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 16px; color: var(--neutral-900);">Créer un feedback</h3>
+                    <div style="background: var(--neutral-50); border-left: 4px solid var(--primary); padding: 16px; margin-bottom: 16px; border-radius: 4px;">
+                        <code style="font-family: monospace; font-weight: 600;">POST /v1/feedbacks</code>
+                    </div>
+                    <div class="code-block">
+                        <pre><code>fetch('https://api.feedbackhub.com/v1/feedbacks', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer VOTRE_CLE_API',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    type: 'bug',
+    title: 'Erreur au chargement',
+    description: 'La page ne charge pas sur Safari',
+    user_email: 'user@example.com'
+  })
+})</code></pre>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 16px; color: var(--neutral-900);">Webhooks</h3>
+                    <p style="color: var(--neutral-600); margin-bottom: 16px;">Recevez des notifications en temps réel lors de nouveaux feedbacks, votes ou changements de statut.</p>
+                    <div class="code-block">
+                        <pre><code>// Payload webhook
+{
+  "event": "feedback.created",
+  "data": {
+    "id": "fb_456def",
+    "type": "feature",
+    "title": "Export CSV",
+    "votes": 1,
+    "created_at": "2025-01-15T14:20:00Z"
+  }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title center">Ressources supplémentaires</h2>
+            <div class="grid grid-3" style="margin-top: 48px;">
+                <a href="#" style="display: block; background: white; border: 1px solid var(--neutral-200); border-radius: 12px; padding: 32px; text-align: center; transition: var(--transition); text-decoration: none;">
+                    <div style="width: 64px; height: 64px; background: rgba(37, 99, 235, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; color: var(--primary);">
+                        <i data-lucide="book-open" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3 style="font-size: 1.125rem; margin-bottom: 8px; color: var(--neutral-900);">Guides complets</h3>
+                    <p style="color: var(--neutral-600); font-size: 0.875rem;">Tutoriels détaillés et cas d'usage</p>
+                </a>
+
+                <a href="#" style="display: block; background: white; border: 1px solid var(--neutral-200); border-radius: 12px; padding: 32px; text-align: center; transition: var(--transition); text-decoration: none;">
+                    <div style="width: 64px; height: 64px; background: rgba(124, 58, 237, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; color: var(--secondary);">
+                        <i data-lucide="code-2" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3 style="font-size: 1.125rem; margin-bottom: 8px; color: var(--neutral-900);">Référence API</h3>
+                    <p style="color: var(--neutral-600); font-size: 0.875rem;">Documentation complète de l'API</p>
+                </a>
+
+                <a href="#" style="display: block; background: white; border: 1px solid var(--neutral-200); border-radius: 12px; padding: 32px; text-align: center; transition: var(--transition); text-decoration: none;">
+                    <div style="width: 64px; height: 64px; background: rgba(16, 185, 129, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; color: var(--accent);">
+                        <i data-lucide="github" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3 style="font-size: 1.125rem; margin-bottom: 8px; color: var(--neutral-900);">Exemples GitHub</h3>
+                    <p style="color: var(--neutral-600); font-size: 0.875rem;">Code source et projets d'exemple</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support -->
+    <section class="section">
+        <div class="container">
+            <div style="background: var(--gradient-primary); border-radius: 16px; padding: 64px; text-align: center; color: white;">
+                <h2 style="font-size: 2rem; margin-bottom: 16px;">Besoin d'aide ?</h2>
+                <p style="font-size: 1.125rem; margin-bottom: 32px; opacity: 0.9;">Notre équipe support est là pour vous aider à réussir votre intégration</p>
+                <div style="display: flex; gap: 16px; justify-content: center;">
+                    <a href="contact.html" class="btn btn-secondary btn-large" style="background: white; color: var(--primary);">Contacter le support</a>
+                    <a href="#" class="btn btn-large" style="background: rgba(255,255,255,0.2); color: white; border: 1px solid rgba(255,255,255,0.3);">Communauté Discord</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="url(#footer-logo-gradient)"/>
+                            <path d="M16 8L22 14H18V20H14V14H10L16 8Z" fill="white"/>
+                            <path d="M10 22H22V24H10V22Z" fill="white"/>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#2563EB"/>
+                                    <stop offset="100%" stop-color="#7C3AED"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>FeedbackHub</span>
+                    </div>
+                    <p class="footer-description">La plateforme de feedback qui transforme vos utilisateurs en co-créateurs de votre produit</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Produit</h4>
+                    <ul>
+                        <li><a href="features.html">Fonctionnalités</a></li>
+                        <li><a href="pricing.html">Tarifs</a></li>
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Changelog</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">Études de cas</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="#">Communauté</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="#">Carrières</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">CGU & CGV</a></li>
+                        <li><a href="#">Confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 FeedbackHub. Tous droits réservés. • Fait avec ❤️ pour les product builders</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

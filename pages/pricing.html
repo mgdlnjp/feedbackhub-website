@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarifs - FeedbackHub</title>
+    <meta name="description" content="Découvrez nos plans tarifaires adaptés à toutes les tailles d'équipes. Essai gratuit 14 jours sans carte bancaire.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+                        <path d="M16 8L22 14H18V20H14V14H10L16 8Z" fill="white"/>
+                        <path d="M10 22H22V24H10V22Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#2563EB"/>
+                                <stop offset="100%" stop-color="#7C3AED"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="logo-text">FeedbackHub</span>
+                </a>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="../index.html#features" class="nav-link">Fonctionnalités</a>
+                    <a href="pricing.html" class="nav-link">Tarifs</a>
+                    <a href="documentation.html" class="nav-link">Documentation</a>
+                    <a href="about.html" class="nav-link">À propos</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="#login" class="nav-link">Connexion</a>
+                    <a href="#signup" class="btn btn-primary">Démarrer gratuitement</a>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" style="padding: 80px 0;">
+        <div class="container">
+            <div class="center">
+                <h1 class="hero-title" style="font-size: 3rem;">Des prix simples et transparents</h1>
+                <p class="hero-subtitle" style="max-width: 700px; margin: 0 auto 32px;">
+                    Choisissez le plan qui correspond à vos besoins. Tous les plans incluent un essai gratuit de 14 jours.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section">
+        <div class="container">
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">
+                        <span class="price-amount">29€</span>
+                        <span class="price-period">/mois</span>
+                    </div>
+                    <p style="color: var(--neutral-600); margin-bottom: 24px;">Parfait pour les petites équipes qui démarrent</p>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i> Jusqu'à 1 000 feedbacks/mois</li>
+                        <li><i data-lucide="check"></i> 1 projet</li>
+                        <li><i data-lucide="check"></i> Widget personnalisable</li>
+                        <li><i data-lucide="check"></i> Système de votes</li>
+                        <li><i data-lucide="check"></i> Dashboard de base</li>
+                        <li><i data-lucide="check"></i> Support email</li>
+                        <li><i data-lucide="check"></i> API REST</li>
+                        <li><i data-lucide="check"></i> Rapports mensuels</li>
+                    </ul>
+                    <a href="#signup" class="btn btn-secondary btn-block">Commencer gratuitement</a>
+                </div>
+
+                <div class="pricing-card pricing-card-featured">
+                    <div class="pricing-badge">Populaire</div>
+                    <h3>Pro</h3>
+                    <div class="price">
+                        <span class="price-amount">79€</span>
+                        <span class="price-period">/mois</span>
+                    </div>
+                    <p style="color: var(--neutral-600); margin-bottom: 24px;">Pour les équipes en croissance</p>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i> Jusqu'à 10 000 feedbacks/mois</li>
+                        <li><i data-lucide="check"></i> 5 projets</li>
+                        <li><i data-lucide="check"></i> Tout du plan Starter, plus :</li>
+                        <li><i data-lucide="check"></i> Priorisation automatique</li>
+                        <li><i data-lucide="check"></i> Notifications Slack & Email</li>
+                        <li><i data-lucide="check"></i> Intégrations (Jira, Trello, Asana)</li>
+                        <li><i data-lucide="check"></i> Webhooks</li>
+                        <li><i data-lucide="check"></i> Support prioritaire</li>
+                        <li><i data-lucide="check"></i> Rapports personnalisés</li>
+                        <li><i data-lucide="check"></i> Changelog public</li>
+                    </ul>
+                    <a href="#signup" class="btn btn-primary btn-block">Commencer gratuitement</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">
+                        <span class="price-amount">Sur devis</span>
+                    </div>
+                    <p style="color: var(--neutral-600); margin-bottom: 24px;">Pour les grandes organisations</p>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i> Feedbacks illimités</li>
+                        <li><i data-lucide="check"></i> Projets illimités</li>
+                        <li><i data-lucide="check"></i> Tout du plan Pro, plus :</li>
+                        <li><i data-lucide="check"></i> SSO & SAML</li>
+                        <li><i data-lucide="check"></i> Contrôle d'accès avancé</li>
+                        <li><i data-lucide="check"></i> SLA garanti</li>
+                        <li><i data-lucide="check"></i> Support dédié 24/7</li>
+                        <li><i data-lucide="check"></i> Onboarding personnalisé</li>
+                        <li><i data-lucide="check"></i> On-premise possible</li>
+                        <li><i data-lucide="check"></i> Conformité avancée</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-secondary btn-block">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title center">Comparaison détaillée des fonctionnalités</h2>
+            <div style="overflow-x: auto; margin-top: 48px;">
+                <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden;">
+                    <thead>
+                        <tr style="background: var(--neutral-100);">
+                            <th style="padding: 16px; text-align: left; font-weight: 600;">Fonctionnalités</th>
+                            <th style="padding: 16px; text-align: center; font-weight: 600;">Starter</th>
+                            <th style="padding: 16px; text-align: center; font-weight: 600;">Pro</th>
+                            <th style="padding: 16px; text-align: center; font-weight: 600;">Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--neutral-200);">
+                            <td style="padding: 16px;">Feedbacks par mois</td>
+                            <td style="padding: 16px; text-align: center;">1 000</td>
+                            <td style="padding: 16px; text-align: center;">10 000</td>
+                            <td style="padding: 16px; text-align: center;">Illimité</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--neutral-200);">
+                            <td style="padding: 16px;">Nombre de projets</td>
+                            <td style="padding: 16px; text-align: center;">1</td>
+                            <td style="padding: 16px; text-align: center;">5</td>
+                            <td style="padding: 16px; text-align: center;">Illimité</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--neutral-200);">
+                            <td style="padding: 16px;">Widget personnalisable</td>
+                            <td style="padding: 16px; text-align: center;"><i data-lucide="check" style="color: var(--accent);"></i></td>
+                            <td style="padding: 16px; text-align: center;"><i data-lucide="check" style="color: var(--accent);"></i></td>
+                            <td style="padding: 16px; text-align: center;"><i data-lucide="check" style="color: var(--accent);"></i></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--neutral-200);">
+                            <td style="padding: 16px;">Système de votes</td>
+                            <td style="padding: 16px; text-align: center;"><i data-lucide="check" style="color: var(--accent);"></i></td>
+                            <td style="padding: 16px; text-align: center;"><i data-lucide="check" style="color: var(--accent);"></i></td>
+                            <td style="padding: 16px; text-align: center;"><i data-lucide="check" style="color: var(--accent);"></i></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--neutral-200);">
+                            <td style="padding: 16px;">API REST</td>
+                            <td style="padding: 16px; text-align: center;"><i data-lucide="check" style="color: var(--accent);"></i></td>
+                            <td style="padding: 16px; text-align: center;"><i data-lucide="check" style="color: var(--accent);"></i></td>
+                            <td style="padding: 16px; text-align: center;"><i data-lucide="check" style="color: var(--accent);"></i></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--neutral-200);">
+                            <td style="padding: 16px;">Priorisation automatique</td>
+                            <td style="padding: 16px; text-align: center;">-</td>
+                            <td style="padding: 16px; text-align: center;"><i data-lucide="check" style="color: var(--accent);"></i></td>
+                            <td style="padding: 16px; text-align: center;"><i data-lucide="check" style="color: var(--accent);"></i></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--neutral-200);">
+                            <td style="padding: 16px;">Intégrations (Jira, Trello, etc.)</td>
+                            <td style="padding: 16px; text-align: center;">-</td>
+                            <td style="padding: 16px; text-align: center;"><i data-lucide="check" style="color: var(--accent);"></i></td>
+                            <td style="padding: 16px; text-align: center;"><i data-lucide="check" style="color: var(--accent);"></i></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--neutral-200);">
+                            <td style="padding: 16px;">Webhooks</td>
+                            <td style="padding: 16px; text-align: center;">-</td>
+                            <td style="padding: 16px; text-align: center;"><i data-lucide="check" style="color: var(--accent);"></i></td>
+                            <td style="padding: 16px; text-align: center;"><i data-lucide="check" style="color: var(--accent);"></i></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--neutral-200);">
+                            <td style="padding: 16px;">SSO & SAML</td>
+                            <td style="padding: 16px; text-align: center;">-</td>
+                            <td style="padding: 16px; text-align: center;">-</td>
+                            <td style="padding: 16px; text-align: center;"><i data-lucide="check" style="color: var(--accent);"></i></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--neutral-200);">
+                            <td style="padding: 16px;">Support</td>
+                            <td style="padding: 16px; text-align: center;">Email</td>
+                            <td style="padding: 16px; text-align: center;">Prioritaire</td>
+                            <td style="padding: 16px; text-align: center;">Dédié 24/7</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title center">Questions fréquentes sur les tarifs</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Puis-je changer de plan à tout moment ?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, vous pouvez upgrader ou downgrader votre plan à tout moment. Les changements prennent effet immédiatement et nous ajustons votre facturation au prorata.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Que se passe-t-il si je dépasse ma limite de feedbacks ?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Vous recevez une alerte lorsque vous approchez de votre limite (80%). Les nouveaux feedbacks sont mis en attente jusqu'au début du prochain mois, ou vous pouvez upgrader immédiatement pour continuer la collecte.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Proposez-vous des réductions pour les associations ou ONG ?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui ! Nous offrons une réduction de 50% pour les associations à but non lucratif et organisations éducatives. Contactez-nous avec vos documents officiels pour en bénéficier.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Y a-t-il des frais d'installation ou d'onboarding ?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Non, aucun frais caché. Le prix affiché est le prix final. L'onboarding est inclus gratuitement dans tous les plans, et personnalisé pour le plan Enterprise.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Acceptez-vous les paiements annuels ?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui ! Le paiement annuel vous offre 2 mois gratuits (soit 16% de réduction). Cette option est disponible pour tous les plans.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quelle est votre politique de remboursement ?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nous offrons une garantie satisfait ou remboursé de 30 jours sur tous les plans payants. Si vous n'êtes pas satisfait, contactez-nous pour un remboursement complet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à commencer ?</h2>
+                <p>Essayez FeedbackHub gratuitement pendant 14 jours. Aucune carte bancaire requise.</p>
+                <div class="cta-buttons">
+                    <a href="#signup" class="btn btn-primary btn-large">Démarrer l'essai gratuit</a>
+                    <a href="contact.html" class="btn btn-secondary btn-large">Parler aux ventes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="url(#footer-logo-gradient)"/>
+                            <path d="M16 8L22 14H18V20H14V14H10L16 8Z" fill="white"/>
+                            <path d="M10 22H22V24H10V22Z" fill="white"/>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#2563EB"/>
+                                    <stop offset="100%" stop-color="#7C3AED"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>FeedbackHub</span>
+                    </div>
+                    <p class="footer-description">La plateforme de feedback qui transforme vos utilisateurs en co-créateurs de votre produit</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Produit</h4>
+                    <ul>
+                        <li><a href="features.html">Fonctionnalités</a></li>
+                        <li><a href="pricing.html">Tarifs</a></li>
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Changelog</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">Études de cas</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="#">Communauté</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="#">Carrières</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">CGU & CGV</a></li>
+                        <li><a href="#">Confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 FeedbackHub. Tous droits réservés. • Fait avec ❤️ pour les product builders</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
